@@ -1,0 +1,9 @@
+:root {
+  --color-primary: hsl(33, 100%, 50%);
+
+  --bg-primary: hsl(199, 100%, 46%);
+
+  /* grey 333 */
+  --color-dark-grey: hsl(0, 0%, 20%);
+  --color-white: hsl(0, 0%, 100%);
+}
