@@ -2,15 +2,48 @@
 
 :root {
   --color-primary: hsl(33, 100%, 50%);
-
-  --bg-primary: hsl(199, 100%, 46%);
-
+  --color-secondary: hsl(199, 100%, 46%);
   /* grey 333 */
   --color-dark-grey: hsl(0, 0%, 20%);
   --color-white: hsl(0, 0%, 100%);
 }
-
+ /* * {
+  border: 2px solid red;
+ } */
 
 body {
+  background-color: var(--color-dark-grey);
+  color: var(--color-white);
+  display: flex;
   font-family: 'Roboto', sans-serif;
+}
+
+/* NAV */
+nav {
+  align-items: center;
+  background-color: var(--color-secondary);
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  width: 20%;
+}
+
+.nav__img {
+  margin: 3rem 0 .5rem;
+  width: 25%;
+}
+
+.list {
+  padding-top: 2rem;
+}
+
+.list__item {
+  font-weight: 500;
+  padding-bottom: 1rem;
+}
+
+.fa-square-poll-vertical {
+  transform: rotate(180);
 }

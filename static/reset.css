@@ -17,7 +17,7 @@
   line-height: 1.5;
 } */
 
-/* Ensures percentage based heights will work as expected. 
+/* Ensures percentage based heights will work as expected.
 Using vh doesn't always work on mobile but % does. */
 html,
 body {
@@ -70,10 +70,4 @@ hr {
 ul,
 ol {
   list-style: none;
-}
-
-/* For use in React. It keeps any z-index in the right place. */
-#root,
-#__next {
-  isolation: isolate;
 }
