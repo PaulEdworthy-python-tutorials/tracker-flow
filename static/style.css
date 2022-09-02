@@ -3,13 +3,13 @@
 :root {
   --color-primary: hsl(33, 100%, 50%);
   --color-secondary: hsl(199, 100%, 46%);
-  /* grey 333 */
   --color-dark-grey: hsl(0, 0%, 20%);
+  --color-grey: hsl(240, 5%, 84%);
   --color-white: hsl(0, 0%, 100%);
 }
  /* * {
   border: 2px solid red;
- } */
+} */
 
 body {
   background-color: var(--color-dark-grey);
@@ -24,6 +24,7 @@ nav {
   background-color: var(--color-secondary);
   display: flex;
   flex-direction: column;
+  font-weight: 500;
   height: 100vh;
   letter-spacing: 2px;
   text-transform: uppercase;
@@ -40,10 +41,10 @@ nav {
 }
 
 .list__item {
-  font-weight: 500;
   padding-bottom: 1rem;
 }
 
+/* rotate chart image since I couldn't find a Kanban icon */
 .fa-square-poll-vertical {
-  transform: rotate(180);
+  transform: rotate(180deg);
 }

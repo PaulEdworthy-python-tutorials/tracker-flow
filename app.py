@@ -21,5 +21,6 @@ if not os.environ.get("API_KEY"):
     raise RuntimeError("API_KEY not set")
 
 @app.route('/')
+@login_required
 def index():
     current_user = session["user_id"]
