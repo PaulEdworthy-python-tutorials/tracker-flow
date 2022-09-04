@@ -18,6 +18,10 @@ body {
   font-family: 'Roboto', sans-serif;
 }
 
+.hidden {
+  display: none;
+}
+
 /* NAV */
 nav {
   align-items: center;
@@ -44,7 +48,34 @@ nav {
   padding-bottom: 1rem;
 }
 
-/* rotate chart image since I couldn't find a Kanban icon */
+/* rotate chart image since I couldn't find a free Kanban icon in FA*/
 .fa-square-poll-vertical {
   transform: rotate(180deg);
+}
+
+/* Header */
+.list__breadcrumbs {
+  display: flex;
+  flex-direction: row;
+  text-transform: uppercase;
+}
+
+.breadcrumb {
+  padding: 0 .75rem;
+}
+
+.breadcrumb__item:not(:last-child)::after {
+  /* content: ' > '; */
+  content: "\f054";
+  font-family: "Font Awesome 6 Free";
+  font-weight: bold;
+  padding: 0 .5rem 0 .3rem;
+}
+
+/* Main */
+.container {
+  border: 1px solid var(--color-white);
+  margin: 4rem;
+  padding: 2rem;
+  width: 80%;
 }

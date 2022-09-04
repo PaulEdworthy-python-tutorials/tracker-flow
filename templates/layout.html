@@ -24,24 +24,65 @@
   <nav class="nav">
     <img class="nav__img" src="/static//favicon.png" alt="">
     <h2 class="nav__title">Tracker Flow</h2>
+    {% if session["user_id"] == "dev" %}
     <ul class="list">
-      <li class="list__item"><a href="/templates/roadmap.html" class="nav__link"><i class="fa-solid fa-map"></i> Roadmap</a></li>
-      <li class="list__item"><i class="fa fa-diagram-project"></i> Projects</li>
-      <li class="list__item"><i class="fa-solid fa-square-poll-vertical"></i> Board</li>
-      <li class="list__item"><i class="fa fa-triangle-exclamation"></i> Issues</li>
-      <li class="list__item"><i class="fa fa-code"></i> Code</li>
-      <li class="list__item"><i class="fa-solid fa-message"></i> Messages</li>
+      <li class="list__item">
+        <a href="/templates/roadmap.html" class="nav__link"><i class="fa-solid fa-map"></i> Roadmap</a>
+      </li>
+      <li class="list__item">
+        <a href="/templates/projects.html" class="nav__link"><i class="fa fa-diagram-project"></i> Projects</a>
+      </li>
+      <li class="list__item">
+        <a href="/templates/status_board.html" class="nav__link"><i class="fa-solid fa-square-poll-vertical"></i>
+          Board</a>
+      </li>
+      <li class="list__item">
+        <a href="/templates/issues.html" class="nav__link"><i class="fa fa-triangle-exclamation"></i> Issues</a>
+      </li>
+      <li class="list__item">
+        <a href="/templates/code.html" class="nav__link"><i class="fa fa-code"></i> Code</a>
+      </li>
+      <li class="list__item">
+        <a href="/templates/messages.html" class="nav__link"><i class="fa-solid fa-message"></i> Messages</a>
+      </li>
     </ul>
     <ul class="list">
-      <li class="list_item">Log out</li>
+      <a href="/templates/logout.html" class="nav__link">
+        <li class="list_item">Log out</li>
+      </a>
     </ul>
+    {% elif session["user_id"] == "admin" %}
+    <ul class="list">
+      <li class="list__item"><a href="#" class="nav__link">Manage Users</a></li>
+      <li class="list__item"><a href="#" class="nav__link">Manage Projects</a></li>
+      <li class="list__item"><a href="#" class="nav__link">Manage Tickets</a></li>
+    </ul>
+    {% else %}
+    <ul class="list">
+      <li class="list__item">Log In</li>
+    </ul>
+    {% endif %}
   </nav>
-  <main class="main">
-    {% block main %}{% endblock %}
-  </main>
-  <footer class="footer">
-
-  </footer>
+  <div class="container">
+    <header>
+      {% if session["user_id"] %}
+      <ul class="list list__breadcrumbs">
+        <!-- {% for item in path %}
+        <li class="list__item breadcrumb__item"><a href="#" class="list__link">/a>{{  }}</li>
+        {% endfor %} -->
+        <!-- <span class="breadcrumb"> > </span> -->
+        <li class="list__item breadcrumb__item"><a href="#" class="list__link">Home</a></li>
+        <li class="list__item breadcrumb__item">Projects</li>
+        <li class="list__item breadcrumb__item">Primary</li>
+      </ul>
+      {% endif %}
+    </header>
+    <main>
+      {% block main %}{% endblock %}
+    </main>
+    <!-- <footer>
+    </footer> -->
+  </div>
 </body>
 
 </html>
