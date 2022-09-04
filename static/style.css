@@ -74,8 +74,31 @@ nav {
 
 /* Main */
 .container {
-  border: 1px solid var(--color-white);
-  margin: 4rem;
+  /* border: 1px solid var(--color-white); */
+  margin: 2rem;
   padding: 2rem;
   width: 80%;
+}
+
+@media screen and (max-width: 1200px){
+  .nav__title {
+    font-size: 1rem;
+    text-align: center;
+  }
+
+  .list {
+    font-size: .75rem;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  nav {
+    width: 33%;
+  }
+
+  .container {
+    margin: .5rem;
+    border: none;
+    width: 66%;
+  }
 }

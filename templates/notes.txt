@@ -1,0 +1,7 @@
+From layout.html
+
+insert after line 69
+        <!-- {% for item in path %}
+        <li class="list__item breadcrumb__item"><a href="#" class="list__link">/a>{{  }}</li>
+        {% endfor %} -->
+        <!-- <span class="breadcrumb"> > </span> -->
