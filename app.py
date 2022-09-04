@@ -22,8 +22,8 @@ app.config["TEMPLATES_AUTO_RELOAD"] = True
 
 @app.route('/')
 # @login_required
-def index():
-    current_user = session["user_id"]
+# def index():
+    # current_user = session["user_id"]
 
 @app.route("/login", methods=["GET", "POST"])
 def login():
